@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Segoe UI, sans-serif;
+  background: radial-gradient(circle at 40% 10%, #25103f 0%, #070b16 45%, #02030a 100%);
+  color: #d8ecff;
+}
+
+.hud-bg {
+  min-height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.scanline {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(transparent 95%, rgba(68, 255, 251, 0.08) 96%);
+  background-size: 100% 6px;
+  pointer-events: none;
+}
+
+.sphere-stage {
+  position: absolute;
+  inset: 0;
+}
+
+h1 {
+  margin: 0;
+  letter-spacing: 0.28em;
+}
+
+.subtitle {
+  margin-top: 6px;
+  color: #8dc4ff;
+}
+
+.overlay {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(980px, 92vw);
+  backdrop-filter: blur(8px);
+  background: rgba(6, 14, 26, 0.25);
+  border: 1px solid rgba(141, 196, 255, 0.2);
+  border-radius: 14px;
+  padding: 10px 14px;
+}
+
+.overlay.top {
+  top: 18px;
+}
+
+.overlay.bottom {
+  bottom: 18px;
+}
+
+.status-grid {
+  display: flex;
+  gap: 18px;
+  font-size: 0.95rem;
+}
+
+.status-grid span {
+  color: #67e8f9;
+  text-transform: uppercase;
+}
+
+.manual-row {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+}
+
+.voice-row {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.voice-row button {
+  border: 1px solid rgba(103, 232, 249, 0.65);
+  background: rgba(18, 35, 68, 0.8);
+  color: #e7f7ff;
+  border-radius: 10px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.mic-error {
+  margin-top: 8px;
+  color: #ff8ea7;
+}
+
+.manual-row input {
+  flex: 1;
+  border-radius: 10px;
+  border: 1px solid rgba(141, 196, 255, 0.35);
+  background: rgba(7, 16, 33, 0.75);
+  color: #dff4ff;
+  padding: 10px 12px;
+}
+
+.manual-row button {
+  border: 1px solid rgba(103, 232, 249, 0.65);
+  background: linear-gradient(90deg, rgba(27, 127, 255, 0.4), rgba(124, 58, 237, 0.45));
+  color: #e7f7ff;
+  border-radius: 10px;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+.caption,
+.heard {
+  margin-top: 10px;
+  color: #c6e5ff;
+}
+
+.waveform {
+  margin-top: 14px;
+  display: flex;
+  gap: 4px;
+  align-items: end;
+  min-height: 34px;
+}
+
+.waveform span {
+  width: 8px;
+  height: 8px;
+  border-radius: 100px;
+  background: linear-gradient(180deg, #6ee7f9 0%, #7c3aed 100%);
+  box-shadow: 0 0 16px rgba(122, 247, 255, 0.5);
+}
